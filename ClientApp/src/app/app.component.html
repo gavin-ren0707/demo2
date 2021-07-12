@@ -6,11 +6,11 @@
         <div class="container"><a class="navbar-brand" href="index.html"> <img class="me-3 d-inline-block" src="assets/images/logo.png" alt="" /></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">Home</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#service">Service</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#feature">Features</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#testimonial">Testimonial</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">Contact</a></li>
+              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">{{title[0]}}</a></li>
+              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#service">{{title[1]}}</a></li>
+              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#feature">{{title[2]}}</a></li>
+              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#testimonial">{{title[3]}}</a></li>
+              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">{{title[4]}}</a></li>
             </ul>
             <form class="ps-lg-5"><button class="btn btn-link text-primary fw-bold order-1 order-lg-0" type="button">Sign in</button><button class="btn btn-light shadow-klean order-0" type="submit"><span class="text-gradient fw-bold">Sign Up</span></button></form>
           </div>
@@ -55,45 +55,21 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center py-7">
-              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Service</h5>
+              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">導覽高雄風景</h5>
               <p class="mb-0">We offer youth with chances for career development in their practice. We also support a wide range of services to ensure client satisfaction</p>
             </div>
           </div>
-          <div class="bg-holder" style="background-image:url(assets/img/illustrations/service.png);background-position:bottom center;background-size:contain;"></div>
+          <div class="bg-holder" style="background-image:url(assets/images/service.png);background-position:bottom center;background-size:contain;"></div>
           <!--/.bg-holder-->
           <div class="row flex-center">
             <div class="col-xl-9">
               <div class="row justify-content-center circle">
-                <div class="col-md-4 mb-4">
+                <div *ngFor="let item of data" class="col-md-4 mb-4">
                   <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                    <div class="text-center"><img class="my-5" src="assets/images/text.png" width="100" alt="services" />
+                    <div class="text-center"><img class="my-5" [style.background-image]="'url('+item.picture1+')'" width="100" alt="services" />
                       <div class="card-body text-center text-md-start">
-                        <h6 class="fw-bold fs-1">Send Texts Instantly</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Financial planning, forecasting and adjusting rapidly with customer demands and budgets.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Learn more<svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-                          </svg></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                    <div class="text-center"><img class="my-5" src="assets/images/organized.png" width="100" alt="services" />
-                      <div class="card-body text-center text-md-start">
-                        <h6 class="fw-bold fs-1">Better Organized</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Latest technology and experienced guidance, trained HR specialists to keep updated.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Learn more<svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-                          </svg></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card card-bg h-100 px-4 px-md-2 px-lg-3 px-xxl-4 pt-4">
-                    <div class="text-center"><img class="my-5" src="assets/images/statistics.png" width="100" alt="services" />
-                      <div class="card-body text-center text-md-start">
-                        <h6 class="fw-bold fs-1">Analytical Statistics</h6>
-                        <p class="mt-3 mb-md-0 mb-lg-3">Messages, real-time reminders, memos, and many more will keep your team in sync.</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Learn more<svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
+                        <h6 class="fw-bold fs-1">{{item.name}}</h6>
+                        <p class="mt-3 mb-md-0 mb-lg-3">{{item.toldescribe}}</p><a class="btn btn-lg ps-0 pe-3 text-primary" href="#" role="button">Learn more<svg class="bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                           </svg></a>
                       </div>
@@ -108,7 +84,7 @@
       <!-- ============================================-->
 
       <section class="py-5 circle-blend circle-blend-right-feature circle-cyan" id="feature">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/feature-bg.png);background-position:right;background-size:auto;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/feature-bg.png);background-position:right;background-size:auto;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="row justify-content-center mb-6">
@@ -176,9 +152,9 @@
         </div>
       </section>
       <section>
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/product-bg-1.png);background-position:center;background-size:cover;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/product-bg-1.png);background-position:center;background-size:cover;"></div>
         <!--/.bg-holder-->
-        <div class="bg-holder mt-n4" style="background-image:url(assets/img/illustrations/product-bg-2.png);background-position:left top;background-size:contain;"></div>
+        <div class="bg-holder mt-n4" style="background-image:url(assets/images/product-bg-2.png);background-position:left top;background-size:contain;"></div>
         <!--/.bg-holder-->
         <div class="container-xl">
           <div class="row flex-center circle-blend circle-blend-left-product circle-cyan">
@@ -216,7 +192,7 @@
       <!-- <section> begin ============================-->
       <section class="py-7">
         <div class="container">
-          <div class="bg-holder" style="background-image:url(assets/img/illustrations/project-bg.png);background-position:right;background-size:auto;"></div>
+          <div class="bg-holder" style="background-image:url(assets/images/project-bg.png);background-position:right;background-size:auto;"></div>
           <!--/.bg-holder-->
           <div class="row justify-content-center circle-blend circle-blend-left-project circle-warning">
             <div class="col-lg-6 text-center mx-auto mb-6">
@@ -248,7 +224,7 @@
       <!-- <section> begin ============================-->
       <section class="pb-0" container container-lg-fluid container-xl="container container-lg-fluid container-xl">
         <div class="container">
-          <div class="bg-holder" style="background-image:url(assets/img/illustrations/team-bg.png);background-position:left top;background-size:auto;"></div>
+          <div class="bg-holder" style="background-image:url(assets/images/team-bg.png);background-position:left top;background-size:auto;"></div>
           <!--/.bg-holder-->
           <div class="row justify-content-center mb-6">
             <div class="col-lg-6 text-center mx-auto mb-7">
@@ -288,9 +264,9 @@
       <!-- ============================================-->
 
       <section class="py-5" id="testimonial">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/testimonial-bg-1.png);background-position:center;background-size:cover;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/testimonial-bg-1.png);background-position:center;background-size:cover;"></div>
         <!--/.bg-holder-->
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/testimonial-bg.png);background-position:right top;background-size:auto;margin-top:-43px;margin-left:-200px;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/testimonial-bg.png);background-position:right top;background-size:auto;margin-top:-43px;margin-left:-200px;"></div>
         <!--/.bg-holder-->
         <div class="container-xxl">
           <div class="row">
@@ -432,9 +408,9 @@
       <!-- <section> begin ============================-->
       <section class="py-5" id="blog">
         <div class="container container-md-fluid">
-          <div class="bg-holder" style="background-image:url(assets/img/illustrations/blog-bg.png);background-position:left top;background-size:auto;margin-top:-23px;"></div>
+          <div class="bg-holder" style="background-image:url(assets/images/blog-bg.png);background-position:left top;background-size:auto;margin-top:-23px;"></div>
           <!--/.bg-holder-->
-          <div class="bg-holder" style="background-image:url(assets/img/illustrations/blog-bg-1.png);background-position:right bottom;background-size:auto;margin-top:-66px;"></div>
+          <div class="bg-holder" style="background-image:url(assets/images/blog-bg-1.png);background-position:right bottom;background-size:auto;margin-top:-66px;"></div>
           <!--/.bg-holder-->
           <div class="row">
             <div class="col-lg-7 col-xxl-5 mx-auto text-center mb-6">
@@ -532,9 +508,9 @@
       <!-- ============================================-->
 
       <section class="py-5 mb-8">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/contact-us-bg.png);background-position:left bottom;background-size:auto;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/contact-us-bg.png);background-position:left bottom;background-size:auto;"></div>
         <!--/.bg-holder-->
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/contact-bg.png);background-position:center right ;background-size:contain;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/contact-bg.png);background-position:center right ;background-size:contain;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="row flex-center">
@@ -593,9 +569,9 @@
         </div>
       </section>
       <section>
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/cta-bg.png);background-position:center;background-size:cover;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/cta-bg.png);background-position:center;background-size:cover;"></div>
         <!--/.bg-holder-->
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/cta-bg-1.png);background-position:right top;background-size:auto;margin-top:-38px;margin-left:-200px;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/cta-bg-1.png);background-position:right top;background-size:auto;margin-top:-38px;margin-left:-200px;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="row flex-center circle-blend circle-blend-right circle-pink">
@@ -607,7 +583,7 @@
         </div>
       </section>
       <section class="pb-0 pt-6">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/footer-bg.png);background-position:center;background-size:cover;"></div>
+        <div class="bg-holder" style="background-image:url(assets/images/footer-bg.png);background-position:center;background-size:cover;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="row justify-content-lg-between circle-blend-right circle-danger">
